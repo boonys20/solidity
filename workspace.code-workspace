@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.sol": "solidity",
+			"*.json": "json"
+		},
+		"solidity.linter": "solhint",
+		"solidity.solhintRules": {
+			"avoid-sha3": "warn"
+		},
+		"solidity.packageDefaultDependenciesDirectory": "node_modules",
+		"solidity.packageDefaultDependenciesContractsDirectory": ""
+	}
+}

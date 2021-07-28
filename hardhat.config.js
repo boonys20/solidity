@@ -6,5 +6,11 @@ require("@nomiclabs/hardhat-waffle");
 require("./tasks/faucet");
 
 module.exports = {
-  solidity: "0.7.3"
+  solidity: "0.8.0",
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 1000,
+    }
+  }
 };
