@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 
-describe("Token contract", function () {
+describe("Exception Example", function () {
 
     let Contract;
     let Token;
@@ -28,15 +28,18 @@ describe("Token contract", function () {
         });
 
         it("should withdraw money 20 eth ", async function () {
-
             await Token.receiveMoney({ value: ethers.utils.parseEther("20") });
-        
             await Token.withDrawMoney(owner.address, ethers.utils.parseEther("20"));
             const addrBalance = await Token.balanceReceived(
                 owner.address
             );
-
             expect(addrBalance).to.equal(ethers.utils.parseEther("0"));
+        });
+
+        it("should inform user don't hava enough ether", async function () {
+            await Token.receiveMoney({ value: ethers.utils.parseEther("10") });
+            const result = Token.withDrawMoney(owner.address, ethers.utils.parseEther("20"));
+            await expect(result).revertedWith("Not Enough Funds, aborting.")
         });
 
     });
