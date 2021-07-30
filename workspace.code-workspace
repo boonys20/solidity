@@ -14,6 +14,6 @@
 			"avoid-sha3": "warn"
 		},
 		"solidity.packageDefaultDependenciesDirectory": "node_modules",
-		"solidity.packageDefaultDependenciesContractsDirectory": "contracts"
+		"solidity.packageDefaultDependenciesContractsDirectory": ""
 	}
 }

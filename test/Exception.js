@@ -10,12 +10,11 @@ describe("Exception Example", function () {
     let addrs;
 
     beforeEach(async function () {
-        Contract = await ethers.getContractFactory("ExceptionExample");
+        Contract = await ethers.getContractFactory("Exception");
         [owner, addr1, addr2, ...addrs] = await ethers.getSigners();
         Token = await Contract.deploy();
         await Token.deployed();
     });
-
 
     describe("Transactions", function () {
 
