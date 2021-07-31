@@ -43,4 +43,10 @@ describe("Exception Example", function () {
 
     });
 
+    describe("Non-Transactions", function () {
+        it("should show result without any gas required, test pure attibute.", async function(){
+            result = await Token.convertWeiToEther(10**8)
+       });
+    });
+
 });
