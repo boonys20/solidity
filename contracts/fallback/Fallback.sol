@@ -6,11 +6,15 @@ contract FallBack {
     event log(string msg);
 
     fallback() external {
-        emit log("fallback() is called.");
+        emit log("It's fallback() func.");
     }
 
+    receive() payable external {
+
+    }
+    
     function foo() external {
-        emit log("foo() is called.");
+        emit log("It's foo() func.");
     }
 
 }
@@ -18,11 +22,11 @@ contract FallBack {
 contract Test {
 
     function callToFoo(address _addr) public {
-        (bool success,) =  _addr.call(abi.encodeWithSignature("Foo()"));
+         _addr.call(abi.encodeWithSignature("Foo()"));
     }
 
     function callToFallBack(address _addr) public {
-        (bool success,) =  _addr.call(abi.encodeWithSignature("FooBoo()"));
+        _addr.call(abi.encodeWithSignature("FooBoo()"));
     }
 }
 

@@ -1,7 +1,7 @@
 # Learning to code a smart contract with solidity. 
 
 This repository contains a sample code that can use as the starting point. 
-It's also a great fit for learning the basics of smart contract development.
+It's also a great fit for learning the basics of smart contract development and fun with test.
 
 ## Sample Code
 
