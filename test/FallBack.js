@@ -29,12 +29,12 @@ describe("Throw Exception Contract", function() {
 
         it(`should called to Foo`, async () => function(){
             const results = testToken.callToFoo();
-            expect(result).to.equal("It's Foo() func.")
+            expect(results).to.equal("It's Foo() func.")
         })
 
         it(`should called to fallback`, async () => function(){
             const results = testToken.callToFallBack();
-            expect(result).to.equal("It's fallback() func.")
+            expect(results).to.equal("It's fallback() func.")
         })
 
     });

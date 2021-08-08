@@ -10,7 +10,7 @@ contract FallBack {
     }
 
     receive() payable external {
-
+        emit log("It's receive() func.");
     }
     
     function foo() external {

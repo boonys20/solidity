@@ -27,7 +27,7 @@ describe("Throw Exception Contract", function() {
 
     describe("Process", function(){
         it(`should throw error message when call aFunction`, async () => function(){
-            const results = Token.catchError();
+            const result = Token.catchError();
             expect(result).to.equal("Not Enough Funds, aborting.")
         })
     });

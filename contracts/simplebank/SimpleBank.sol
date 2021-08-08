@@ -19,7 +19,7 @@ contract Corebank {
     _;
   }
 
- constructor() public {
+ constructor() {
     owner = msg.sender;
   }
 
